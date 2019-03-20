@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="materias.FXMLMateriasController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="252.0" layoutX="691.0" layoutY="152.0" stroke="BLACK" strokeType="INSIDE" width="385.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="241.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="657.0" />
+      <MenuBar prefHeight="29.0" prefWidth="1102.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Alumnos">
+            <items>
+              <MenuItem fx:id="miControlAlumnos" mnemonicParsing="false" onAction="#ventanaAlumnos" text="Control Alumnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Materias">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Control materias" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Horarios">
+              <items>
+                <MenuItem fx:id="miControlHorarios" mnemonicParsing="false" onAction="#ventanaHorarios" text="Control Horarios" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tblMaterias" layoutX="24.0" layoutY="145.0" onSort="#cargarTablaMaterias" prefHeight="360.0" prefWidth="628.0">
+         <columns>
+            <TableColumn fx:id="tcNRC" prefWidth="98.13609790802002" text="NRC" />
+            <TableColumn fx:id="tcNombre" prefWidth="140.97898864746094" text="Nombre" />
+            <TableColumn fx:id="tcCreditos" prefWidth="96.03956604003906" text="Creditos" />
+            <TableColumn fx:id="tcHpracticas" prefWidth="125.96047973632812" text="Horas Practicas" />
+            <TableColumn fx:id="tcHteoricas" prefWidth="163.26107788085938" text="Horas Teoricas" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txfHteoricas" layoutX="848.0" layoutY="354.0" prefHeight="27.0" prefWidth="219.0" />
+      <Label layoutX="703.0" layoutY="359.0" prefHeight="23.0" prefWidth="134.0" text="Horas teoricas:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="698.0" layoutY="175.0" text="NRC:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="699.0" layoutY="222.0" text="Nombre:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="264.0" text="Creditos">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="701.0" layoutY="312.0" text="Horas practicas:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfNRC" layoutX="849.0" layoutY="173.0" prefHeight="27.0" prefWidth="218.0" />
+      <TextField fx:id="txfNombre" layoutX="848.0" layoutY="218.0" prefHeight="27.0" prefWidth="220.0" />
+      <TextField fx:id="txfCreditos" layoutX="847.0" layoutY="264.0" prefHeight="27.0" prefWidth="221.0" />
+      <TextField fx:id="txfHpracticas" layoutX="847.0" layoutY="308.0" prefHeight="27.0" prefWidth="220.0" />
+      <Button fx:id="btAgregar" layoutX="697.0" layoutY="515.0" mnemonicParsing="false" onAction="#agregarMateria" text="Agregar">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEditar" layoutX="800.0" layoutY="515.0" mnemonicParsing="false" onAction="#editarMateria" prefHeight="33.0" prefWidth="83.0" text="Editar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEliminar" layoutX="901.0" layoutY="515.0" mnemonicParsing="false" onAction="#eliminarMateria" prefHeight="33.0" prefWidth="83.0" text="Eliminar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btGuardar" layoutX="1008.0" layoutY="515.0" mnemonicParsing="false" onAction="#guardarCambios" prefHeight="33.0" prefWidth="83.0" text="Guardar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="356.0" layoutY="54.0" text="Control Materias">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="95.0" fitWidth="129.0" layoutX="19.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/UV_Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

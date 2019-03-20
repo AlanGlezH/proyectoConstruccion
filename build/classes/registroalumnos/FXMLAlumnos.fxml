@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registroalumnos.FXMLAlumnosController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="143.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="765.0" />
+      <ImageView fitHeight="81.0" fitWidth="110.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/UV_Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="300.0" layoutY="60.0" text="Registro de Alumnos">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAlumnos" layoutX="75.0" layoutY="184.0" onSort="#cargarTablaAlumnos" prefHeight="250.0" prefWidth="453.0">
+        <columns>
+            <TableColumn fx:id="tcMatricula" prefWidth="90.68273162841797" text="Matricula" />
+          <TableColumn fx:id="tcNombre" prefWidth="110.3172607421875" text="Nombre" />
+          <TableColumn fx:id="tcPaterno" prefWidth="102.0" text="Apellido paterno" />
+            <TableColumn fx:id="tcMaterno" prefWidth="151.0" text="Apellido materno" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="584.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
+      <Label layoutX="592.0" layoutY="210.0" text="Matricula:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="257.0" text="Nombre:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="594.0" layoutY="299.0" text="Apellido paterno:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="595.0" layoutY="346.0" text="Apelllido materno:">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfMatricula" layoutX="748.0" layoutY="208.0" prefHeight="27.0" prefWidth="213.0" />
+      <TextField fx:id="txfNombre" layoutX="749.0" layoutY="253.0" prefHeight="27.0" prefWidth="213.0" />
+      <TextField fx:id="txfApellidoPaterno" layoutX="749.0" layoutY="299.0" prefHeight="27.0" prefWidth="213.0" />
+      <TextField fx:id="txfApellidoMaterno" layoutX="748.0" layoutY="343.0" prefHeight="27.0" prefWidth="213.0" />
+      <Button fx:id="btAgregar" layoutX="582.0" layoutY="407.0" mnemonicParsing="false" onAction="#agregarAlumno" text="Agregar">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEditar" layoutX="685.0" layoutY="407.0" mnemonicParsing="false" onAction="#EditarAlumno" prefHeight="33.0" prefWidth="83.0" text="Editar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEliminar" layoutX="786.0" layoutY="407.0" mnemonicParsing="false" onAction="#eliminarAlumno" prefHeight="33.0" prefWidth="83.0" text="Eliminar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btGuardar" layoutX="893.0" layoutY="407.0" mnemonicParsing="false" onAction="#guardarCambios" prefHeight="33.0" prefWidth="83.0" text="Guardar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <MenuBar prefHeight="29.0" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Alumnos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Control Alumnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Materias">
+            <items>
+              <MenuItem fx:id="miControlMaterias" mnemonicParsing="false" onAction="#ventanaMaterias" text="Control materias" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Horario">
+              <items>
+                <MenuItem fx:id="miControlHorariosMaterias" mnemonicParsing="false" onAction="#ventanaHorariosMaterias" text="Control Horarios" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

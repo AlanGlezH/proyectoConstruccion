@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="1307.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="horariomaterias.FXMLHorarioMateriasController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="54.0" layoutX="247.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="657.0" />
+      <ChoiceBox fx:id="cbHinicio1" layoutX="1029.0" layoutY="266.0" prefHeight="27.0" prefWidth="106.0" />
+      <MenuBar prefHeight="29.0" prefWidth="1307.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Alumnos">
+            <items>
+              <MenuItem fx:id="miControlAlumnos" mnemonicParsing="false" onAction="#ventanaAlumnos" text="Control Alumnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Materias">
+            <items>
+              <MenuItem fx:id="miControlMaterias" mnemonicParsing="false" onAction="#ventanaMaterias" text="Control Materias" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Horarios">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Control Horarios" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tblHorariosMaterias" layoutX="25.0" layoutY="154.0" onSort="#cargarTablaHorarioMaterias" prefHeight="303.0" prefWidth="910.0">
+        <columns>
+          <TableColumn fx:id="tcNrc" prefWidth="55.0" text="NRC" />
+          <TableColumn fx:id="tcAcademico" prefWidth="184.0" text="Academico" />
+            <TableColumn fx:id="tcSalon" prefWidth="48.0" text="Salon" />
+            <TableColumn fx:id="tcCupo" minWidth="0.0" prefWidth="40.0" text="Cupo" />
+            <TableColumn fx:id="tcHorasLunes" prefWidth="93.0" text="Lunes" />
+            <TableColumn fx:id="tcHorasMartes" prefWidth="89.0" text="Martes" />
+            <TableColumn fx:id="tcHorasMiercoles" prefWidth="103.0" text="Miercoles" />
+            <TableColumn fx:id="tcHorasJueves" prefWidth="96.0" text="Jueves" />
+            <TableColumn fx:id="tcHorasViernes" minWidth="8.0" prefWidth="99.0" text="Viernes" />
+            <TableColumn fx:id="tcHorasSabados" minWidth="1.0" prefWidth="102.0" text="Sabado" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="94.0" fitWidth="117.0" layoutX="9.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/UV_Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="369.0" layoutY="51.0" text="Control Horarios">
+         <font>
+            <Font name="Arial Black" size="40.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cbHinicio2" layoutX="1029.0" layoutY="301.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHinicio4" layoutX="1029.0" layoutY="369.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHinicio3" layoutX="1029.0" layoutY="335.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHinicio6" layoutX="1029.0" layoutY="438.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHinicio5" layoutX="1029.0" layoutY="404.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin5" layoutX="1179.0" layoutY="404.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin6" layoutX="1179.0" layoutY="438.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin3" layoutX="1179.0" layoutY="335.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin4" layoutX="1179.0" layoutY="369.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin2" layoutX="1179.0" layoutY="301.0" prefHeight="27.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="cbHfin1" layoutX="1179.0" layoutY="266.0" prefHeight="27.0" prefWidth="106.0" />
+      <Text layoutX="1050.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora inicio:" />
+      <Text layoutX="1208.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora fin:" />
+      <Text layoutX="949.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lunes:" />
+      <Text layoutX="949.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martes" />
+      <Text layoutX="948.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miercoles" />
+      <Text layoutX="946.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sabado:" />
+      <Text layoutX="946.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Viernes" />
+      <Text layoutX="946.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jueves" />
+      <ChoiceBox fx:id="cbMaterias" layoutX="989.0" layoutY="155.0" prefHeight="27.0" prefWidth="175.0" />
+      <Text layoutX="955.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EE:" />
+      <Text layoutX="1175.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salon:" />
+      <TextField fx:id="txfSalon" layoutX="1221.0" layoutY="155.0" prefHeight="27.0" prefWidth="59.0" />
+      <Text layoutX="955.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Academico:" />
+      <TextField fx:id="txfAcademico" layoutX="1039.0" layoutY="203.0" prefHeight="27.0" prefWidth="152.0" />
+      <Text layoutX="1203.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cupo:" />
+      <TextField fx:id="txfCupo" layoutX="1246.0" layoutY="203.0" prefHeight="27.0" prefWidth="34.0" />
+      <Button fx:id="btGuardar" layoutX="756.0" layoutY="483.0" mnemonicParsing="false" onAction="#guardarCambios" prefHeight="33.0" prefWidth="83.0" text="Guardar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEliminar" layoutX="649.0" layoutY="483.0" mnemonicParsing="false" onAction="#eliminarHorarioMateria" prefHeight="33.0" prefWidth="83.0" text="Eliminar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEditar" layoutX="548.0" layoutY="483.0" mnemonicParsing="false" onAction="#EditarHorarioMateria" prefHeight="33.0" prefWidth="83.0" text="Editar">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btAgregar" layoutX="445.0" layoutY="483.0" mnemonicParsing="false" onAction="#agregarHorario" text="Agregar">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
